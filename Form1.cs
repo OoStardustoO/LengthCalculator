@@ -19,7 +19,7 @@ namespace LengthCalculator
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
-
+          
         }
 
         private void textBox7_TextChanged(object sender, EventArgs e)
@@ -172,6 +172,17 @@ namespace LengthCalculator
                 txtIn.Text = "";
                 txtFt.Text = "";
             }
+        }
+
+        private void btnAllClear_Click(object sender, EventArgs e)
+        {
+            txtCM.Text = "";
+            txtM.Text = "";
+            txtKM.Text = "";
+            txtIn.Text = "";
+            txtFt.Text = "";
+            txtYard.Text = "";
+            txtInfo.Text = "";
         }
     }
 }
