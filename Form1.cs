@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace LengthCalculator
 {
-    public partial class Form1: Form
+    public partial class Form1 : Form
     {
         public Form1()
         {
@@ -29,13 +29,149 @@ namespace LengthCalculator
 
         private void txtCM_KeyUp(object sender, KeyEventArgs e)
         {
-            double douCM; //宣告一個double變數，變數名稱叫douCM
+            double douCM;
+            if (double.TryParse(txtCM.Text, out douCM))
+            {
+                txtM.Text = string.Format("{0:0.##########}", douCM / 100);
+                txtKM.Text = string.Format("{0:0.##########}", douCM / 100000);
+                txtIn.Text = string.Format("{0:0.##########}", douCM / 2.54);
+                txtFt.Text = string.Format("{0:0.##########}", douCM / 30.48);
+                txtYard.Text = string.Format("{0:0.##########}", douCM / 91.44);
+            }
+            else
+            {
+                // Handle invalid input, e.g., clear the output text boxes or show an error message
+                txtM.Text = "";
+                txtKM.Text = "";
+                txtIn.Text = "";
+                txtFt.Text = "";
+                txtYard.Text = "";
+            }
+        }
 
-            douCM = Convert.ToDouble(txtCM.Text); //從txtCM輸入文字框取得輸入的文字，並且轉換成double的資料型態
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
 
-            txtM.Text = string.Format("{0:0.##########}", douCM / 100);
-            //將douCM的數值除以100，也就是從公分轉換成公尺
-            //透過string.Format格式化成小數點後共10位的數字，轉型成文字型態，在txtM顯示結果
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtM_KeyUp(object sender, KeyEventArgs e)
+        {
+            double douM;
+            if (double.TryParse(txtM.Text, out douM))
+            {
+                txtCM.Text = string.Format("{0:0.##########}", douM * 100);
+                txtKM.Text = string.Format("{0:0.##########}", douM / 1000);
+                txtIn.Text = string.Format("{0:0.##########}", douM * 39.3701);
+                txtFt.Text = string.Format("{0:0.##########}", douM * 3.28084);
+                txtYard.Text = string.Format("{0:0.##########}", douM * 1.09361);
+            }
+            else
+            {
+                // Handle invalid input, e.g., clear the output text boxes or show an error message
+                txtCM.Text = "";
+                txtKM.Text = "";
+                txtIn.Text = "";
+                txtFt.Text = "";
+                txtYard.Text = "";
+            }
+        }
+
+        private void txtKM_KeyUp(object sender, KeyEventArgs e)
+        {
+            double douKM;
+            if (double.TryParse(txtKM.Text, out douKM))
+            {
+                txtCM.Text = string.Format("{0:0.##########}", douKM * 100000);
+                txtM.Text = string.Format("{0:0.##########}", douKM * 1000);
+                txtIn.Text = string.Format("{0:0.##########}", douKM * 39370.1);
+                txtFt.Text = string.Format("{0:0.##########}", douKM * 3280.84);
+                txtYard.Text = string.Format("{0:0.##########}", douKM * 1093.61);
+            }
+            else
+            {
+                // Handle invalid input, e.g., clear the output text boxes or show an error message
+                txtCM.Text = "";
+                txtM.Text = "";
+                txtIn.Text = "";
+                txtFt.Text = "";
+                txtYard.Text = "";
+            }
+        }
+
+        private void txtIn_KeyUp(object sender, KeyEventArgs e)
+        {
+            double douIn;
+            if (double.TryParse(txtIn.Text, out douIn))
+            {
+                txtCM.Text = string.Format("{0:0.##########}", douIn * 2.54);
+                txtM.Text = string.Format("{0:0.##########}", douIn * 0.0254);
+                txtKM.Text = string.Format("{0:0.##########}", douIn * 0.0000254);
+                txtFt.Text = string.Format("{0:0.##########}", douIn * 0.0833333);
+                txtYard.Text = string.Format("{0:0.##########}", douIn * 0.0277778);
+            }
+            else
+            {
+                // Handle invalid input, e.g., clear the output text boxes or show an error message
+                txtCM.Text = "";
+                txtM.Text = "";
+                txtKM.Text = "";
+                txtFt.Text = "";
+                txtYard.Text = "";
+            }
+        }
+
+        private void txtFt_KeyUp(object sender, KeyEventArgs e)
+        {
+            double douFt;
+            if (double.TryParse(txtFt.Text, out douFt))
+            {
+                txtCM.Text = string.Format("{0:0.##########}", douFt * 30.48);
+                txtM.Text = string.Format("{0:0.##########}", douFt * 0.3048);
+                txtKM.Text = string.Format("{0:0.##########}", douFt * 0.0003048);
+                txtIn.Text = string.Format("{0:0.##########}", douFt * 12);
+                txtYard.Text = string.Format("{0:0.##########}", douFt * 0.333333);
+            }
+            else
+            {
+                // Handle invalid input, e.g., clear the output text boxes or show an error message
+                txtCM.Text = "";
+                txtM.Text = "";
+                txtKM.Text = "";
+                txtIn.Text = "";
+                txtYard.Text = "";
+            }
+        }
+
+        private void txtYard_KeyUp(object sender, KeyEventArgs e)
+        {
+            double douYard;
+            if (double.TryParse(txtYard.Text, out douYard))
+            {
+                txtCM.Text = string.Format("{0:0.##########}", douYard * 91.44);
+                txtM.Text = string.Format("{0:0.##########}", douYard * 0.9144);
+                txtKM.Text = string.Format("{0:0.##########}", douYard * 0.0009144);
+                txtIn.Text = string.Format("{0:0.##########}", douYard * 36);
+                txtFt.Text = string.Format("{0:0.##########}", douYard * 3);
+            }
+            else
+            {
+                // Handle invalid input, e.g., clear the output text boxes or show an error message
+                txtCM.Text = "";
+                txtM.Text = "";
+                txtKM.Text = "";
+                txtIn.Text = "";
+                txtFt.Text = "";
+            }
         }
     }
 }

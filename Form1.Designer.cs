@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAllClear = new System.Windows.Forms.Button();
             this.txtCM = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -36,30 +36,31 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtYard = new System.Windows.Forms.TextBox();
+            this.txtKM = new System.Windows.Forms.TextBox();
+            this.txtFt = new System.Windows.Forms.TextBox();
+            this.txtIn = new System.Windows.Forms.TextBox();
             this.txtM = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtInfo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button1
+            // btnAllClear
             // 
-            this.button1.Location = new System.Drawing.Point(60, 40);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "清除";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAllClear.Location = new System.Drawing.Point(60, 32);
+            this.btnAllClear.Name = "btnAllClear";
+            this.btnAllClear.Size = new System.Drawing.Size(100, 40);
+            this.btnAllClear.TabIndex = 0;
+            this.btnAllClear.Text = "清除";
+            this.btnAllClear.UseVisualStyleBackColor = true;
+            this.btnAllClear.Click += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // txtCM
             // 
-            this.txtCM.Location = new System.Drawing.Point(60, 162);
+            this.txtCM.Location = new System.Drawing.Point(60, 152);
             this.txtCM.Multiline = true;
             this.txtCM.Name = "txtCM";
-            this.txtCM.Size = new System.Drawing.Size(100, 25);
+            this.txtCM.Size = new System.Drawing.Size(100, 35);
             this.txtCM.TabIndex = 1;
             this.txtCM.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtCM_KeyUp);
             // 
@@ -79,9 +80,9 @@
             this.label2.Font = new System.Drawing.Font("新細明體", 19F);
             this.label2.Location = new System.Drawing.Point(433, 253);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 32);
+            this.label2.Size = new System.Drawing.Size(78, 32);
             this.label2.TabIndex = 3;
-            this.label2.Text = "碼";
+            this.label2.Text = "英碼";
             // 
             // label3
             // 
@@ -89,9 +90,9 @@
             this.label3.Font = new System.Drawing.Font("新細明體", 19F);
             this.label3.Location = new System.Drawing.Point(242, 253);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 32);
+            this.label3.Size = new System.Drawing.Size(78, 32);
             this.label3.TabIndex = 4;
-            this.label3.Text = "呎";
+            this.label3.Text = "英呎";
             // 
             // label4
             // 
@@ -123,72 +124,86 @@
             this.label6.TabIndex = 7;
             this.label6.Text = "公尺";
             // 
-            // textBox2
+            // txtYard
             // 
-            this.textBox2.Location = new System.Drawing.Point(427, 327);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 25);
-            this.textBox2.TabIndex = 8;
+            this.txtYard.Location = new System.Drawing.Point(427, 303);
+            this.txtYard.Multiline = true;
+            this.txtYard.Name = "txtYard";
+            this.txtYard.Size = new System.Drawing.Size(100, 37);
+            this.txtYard.TabIndex = 8;
+            this.txtYard.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtYard.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtYard_KeyUp);
             // 
-            // textBox3
+            // txtKM
             // 
-            this.textBox3.Location = new System.Drawing.Point(427, 162);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 25);
-            this.textBox3.TabIndex = 9;
+            this.txtKM.Location = new System.Drawing.Point(427, 152);
+            this.txtKM.Multiline = true;
+            this.txtKM.Name = "txtKM";
+            this.txtKM.Size = new System.Drawing.Size(100, 35);
+            this.txtKM.TabIndex = 9;
+            this.txtKM.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.txtKM.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtKM_KeyUp);
             // 
-            // textBox4
+            // txtFt
             // 
-            this.textBox4.Location = new System.Drawing.Point(234, 327);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 25);
-            this.textBox4.TabIndex = 10;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.txtFt.Location = new System.Drawing.Point(234, 303);
+            this.txtFt.Multiline = true;
+            this.txtFt.Name = "txtFt";
+            this.txtFt.Size = new System.Drawing.Size(100, 37);
+            this.txtFt.TabIndex = 10;
+            this.txtFt.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.txtFt.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtFt_KeyUp);
             // 
-            // textBox5
+            // txtIn
             // 
-            this.textBox5.Location = new System.Drawing.Point(60, 327);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 25);
-            this.textBox5.TabIndex = 11;
+            this.txtIn.Location = new System.Drawing.Point(60, 303);
+            this.txtIn.Multiline = true;
+            this.txtIn.Name = "txtIn";
+            this.txtIn.Size = new System.Drawing.Size(100, 37);
+            this.txtIn.TabIndex = 11;
+            this.txtIn.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.txtIn.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtIn_KeyUp);
             // 
             // txtM
             // 
-            this.txtM.Location = new System.Drawing.Point(234, 162);
+            this.txtM.Location = new System.Drawing.Point(234, 152);
+            this.txtM.Multiline = true;
             this.txtM.Name = "txtM";
-            this.txtM.Size = new System.Drawing.Size(100, 25);
+            this.txtM.Size = new System.Drawing.Size(100, 35);
             this.txtM.TabIndex = 12;
+            this.txtM.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtM_KeyUp);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("新細明體", 19F);
-            this.label7.Location = new System.Drawing.Point(71, 397);
+            this.label7.Location = new System.Drawing.Point(29, 397);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(142, 32);
             this.label7.TabIndex = 13;
             this.label7.Text = "文字說明";
             // 
-            // textBox7
+            // txtInfo
             // 
-            this.textBox7.Location = new System.Drawing.Point(234, 397);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(293, 25);
-            this.textBox7.TabIndex = 14;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            this.txtInfo.Location = new System.Drawing.Point(207, 397);
+            this.txtInfo.Multiline = true;
+            this.txtInfo.Name = "txtInfo";
+            this.txtInfo.Size = new System.Drawing.Size(343, 32);
+            this.txtInfo.TabIndex = 14;
+            this.txtInfo.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox7);
+            this.ClientSize = new System.Drawing.Size(589, 450);
+            this.Controls.Add(this.txtInfo);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtM);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtIn);
+            this.Controls.Add(this.txtFt);
+            this.Controls.Add(this.txtKM);
+            this.Controls.Add(this.txtYard);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -196,7 +211,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCM);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAllClear);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -206,7 +221,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAllClear;
         private System.Windows.Forms.TextBox txtCM;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -214,13 +229,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtYard;
+        private System.Windows.Forms.TextBox txtKM;
+        private System.Windows.Forms.TextBox txtFt;
+        private System.Windows.Forms.TextBox txtIn;
         private System.Windows.Forms.TextBox txtM;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtInfo;
     }
 }
 
