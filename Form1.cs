@@ -46,6 +46,8 @@ namespace LengthCalculator
                 txtIn.Text = "";
                 txtFt.Text = "";
                 txtYard.Text = "";
+                txtInfo.Text = "你輸入錯了拉";
+                txtCM.Text = "";
             }
         }
 
@@ -83,6 +85,8 @@ namespace LengthCalculator
                 txtIn.Text = "";
                 txtFt.Text = "";
                 txtYard.Text = "";
+                txtInfo.Text = "你輸入錯了拉";
+                txtM.Text = "";
             }
         }
 
@@ -105,6 +109,8 @@ namespace LengthCalculator
                 txtIn.Text = "";
                 txtFt.Text = "";
                 txtYard.Text = "";
+                txtInfo.Text = "你輸入錯了拉";
+                txtKM.Text = "";
             }
         }
 
@@ -127,6 +133,8 @@ namespace LengthCalculator
                 txtKM.Text = "";
                 txtFt.Text = "";
                 txtYard.Text = "";
+                txtInfo.Text = "你輸入錯了拉";
+                txtIn.Text = "";
             }
         }
 
@@ -149,6 +157,8 @@ namespace LengthCalculator
                 txtKM.Text = "";
                 txtIn.Text = "";
                 txtYard.Text = "";
+                txtInfo.Text = "你輸入錯了拉";
+                txtFt.Text = "";
             }
         }
 
@@ -171,6 +181,8 @@ namespace LengthCalculator
                 txtKM.Text = "";
                 txtIn.Text = "";
                 txtFt.Text = "";
+                txtInfo.Text = "你輸入錯了拉";
+                txtYard.Text = "";
             }
         }
 
